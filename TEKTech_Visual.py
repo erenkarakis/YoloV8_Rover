@@ -47,6 +47,6 @@ class Visualizer:
         cv2.putText(img, text, (bboxCoordinates[0][0], bboxCoordinates[0][1]-int(textHeight/2)), font, fontSize, textColor, textThickness)
         
     def fpsCounter(self, img, cTime, pTime, pt=(20,30), color=(255,0,0)):
-        '''@ brief Shows the fps on the screen\n @param img Image.\n @param cTime Current time.\n @param pTime Previous time.\n @param pt Location of the fps counter on the screen.\n @param color Color'''
+        '''@brief Shows the fps on the screen\n @param img Image.\n @param cTime Current time.\n @param pTime Previous time.\n @param pt Location of the fps counter on the screen.\n @param color Color'''
         fps = int(1/(cTime-pTime))
         cv2.putText(img, f"FPS: {fps}", pt, cv2.FONT_HERSHEY_PLAIN, 2, color, 2)

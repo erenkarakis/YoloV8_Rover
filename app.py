@@ -5,7 +5,7 @@ detector = Visualizer()
 classeNames, classColors = detector.readClassesFromFile("classNames.names")
 
 modelName = "yolov8l"
-videoSource = "test/times_square.mp4"
+videoSource = "test/traffic.mp4"
 model = YOLO("yolo_weights/"+modelName+".pt")
 
 def predictImage(imagePath):
@@ -57,5 +57,5 @@ def predictVideo(source, flipWebcam=True):
     cv2.destroyAllWindows()
 
 
-#detector.predictImage("test/car.jpg")
+#predictImage("test/car.jpg")
 predictVideo(videoSource)
